@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 响应式的列重置</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h4>响应式的列重置</h4>
+        <div class="row">
+            <!--
+                所在div总宽为12
+                界面大小不足时为col-xs
+                充足时为col-sm
+                col-xs-6,2*6=12 两列同行
+                col-sm-3,3*4=12 4列同行
+            -->
+            <div class="col-xs-6 col-sm-3"
+                style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>第一列</p>
+                <p>本章节我们将讲解 Bootstrap 的网格系统（Grid System）。</p>
+                <p>Bootstrap 提供了一套响应式、移动设备优先的流式网格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。</p>
+            </div>
+            <div class="col-xs-6 col-sm-3"
+                style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>第二列</p>
+                <p>
+                    什么是网格（Grid）？
+                </p>
+                <p>
+                    在平面设计中，网格是一种由一系列用于组织内容的相交的直线（垂直的、水平的）组成的结构（通常是二维的）。它广泛应用于打印设计中的设计布局和内容结构。在网页设计中，它是一种用于快速创建一致的布局和有效地使用
+                    HTML 和 CSS 的方法。
+                </p>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-3"
+                style="background-color: #dedef8; box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>第三列</p>
+                <p>
+                    什么是 Bootstrap 网格系统（Grid System）？
+                </p>
+                <p>Bootstrap 包含了一个响应式的、移动设备优先的、不固定的网格系统，可以随着设备或视口大小的增加而适当地扩展到 12
+                    列。它包含了用于简单的布局选项的预定义类，也包含了用于生成更多语义布局的功能强大的混合类。</p>
+            </div>
+            <div class="col-xs-6 col-sm-3"
+                style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>第四列</p>
+                <p>
+                    让我们来理解一下上面的语句。Bootstrap 3 是移动设备优先的，在这个意义上，Bootstrap
+                    代码从小屏幕设备（比如移动设备、平板电脑）开始，然后扩展到大屏幕设备（比如笔记本电脑、台式电脑）上的组件和网格。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h4>偏移列</h4>
+        <div class="row">
+            <!--
+                md类型 为偏移类
+                所在总宽为12
+                col-md 为列宽
+                当揭界面宽度大于等于col-md时正常显示
+                col-md-offset 为正常显示时列距离左边元素的（页面边框，块边框等）距离
+            -->
+            <div class="col-md-6 col-md-offset-3"
+                style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="col-md-6 col-md-offset-3"
+                style="background-color: #dedef8;box-shadow: inset 1px -1px 1px rgb(95, 59, 59), inset -1px 1px 1px #444;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h4>嵌套列</h4>
+        <div class="row">
+            <div class="col-md-3"
+                style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <h4>第一列</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="col-md-9"
+                style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <h4>第二列 - 分为四个盒子</h4>
+                <div class="row">
+                    <div class="col-md-6"
+                        style="background-color: #B18904; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                        <p>
+                            Consectetur art party Tonx culpa semiotics. Pinterest
+                            assumenda minim organic quis.
+                        </p>
+                    </div>
+                    <div class="col-md-6"
+                        style="background-color: #B18904; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                        <p>
+                            sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"
+                        style="background-color: #B18904; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                        <p>
+                            quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="col-md-6"
+                        style="background-color: #B18904; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h4>列排序</h4>
+
+        <div class="row">
+            <p>
+                排序前1
+            </p>
+            <div class="col-md-4"
+                style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                我在左边
+            </div>
+            <div class="col-md-8"
+                style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                我在右边
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <p>
+                排序前2
+            </p>
+            <div class="col-md-4"
+                style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                我在左边
+            </div>
+            <div class="col-md-8"
+                style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                我在右边
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <p>
+                排序后
+            </p>
+            <!--
+                col-md-push向右诺
+                col-md-pull向左拉
+            -->
+            <div class="col-md-4 col-md-push-8"
+                style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                我在左边
+            </div>
+            <div class="col-md-8 col-md-pull-4"
+                style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                我在右边
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

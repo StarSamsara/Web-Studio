@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--
+        移动设备优先
+        width 属性控制设备的宽度。假设您的网站将被带有不同屏幕分辨率的设备浏览，那么将它设置为 device-width 可以确保它能正确呈现在不同设备上。
+        initial-scale=1.0 确保网页加载时，以 1:1 的比例呈现，不会有任何的缩放。
+        通常情况下，maximum-scale=1.0 与 user-scalable=no 一起使用。这样禁用缩放功能后，用户只能滚动屏幕，就能让您的网站看上去更像原生应用的感觉。
+    -->
+    <meta charset="utf-8" name="viewport" content="width=device-width, 
+                                                    initial-scale=1.0,
+                                                    maximum-scale=1.0,
+                                                    user-scalable=no">
+    <title>在线尝试 Bootstrap 实例</title>
+    <style>
+        ul li {
+            list-style: none;
+        }
+
+
+        .img-responsive {
+            display: block;
+            height: auto;
+            max-width: 100%;
+            /*可以让图像按比例缩放，不超过其父元素的尺寸。*/
+        }
+
+
+        body {
+            /*第一条规则设置 body 的默认字体样式为 "Helvetica Neue", Helvetica, Arial, sans-serif。*/
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            /*第二条规则设置文本的默认字体大小为 14 像素。*/
+            font-size: 14px;
+            /*第三条规则设置默认的行高度为 1.428571429。*/
+            line-height: 1.428571429;
+            /*第四条规则设置默认的文本颜色为 #333333。*/
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .container:before,
+        .container:after {
+            /*这会产生伪元素。*/
+            /*before伪元素防止上边距崩塌*/
+            /*:after 伪元素清除浮动*/
+            display: table;
+            /*如果 conteneditable 属性出现在 HTML 中，由于一些 Opera bug，围绕上述元素创建一个空格。这可以通过使用 content: " " 来修复。*/
+            content: " ";
+        }
+
+        .container:after {
+            clear: both;
+            /*clear 清除两边浮动*/
+        }
+
+        /*Bootstrap 3 CSS 有一个申请响应的媒体查询，在不同的媒体查询阈值范围内都为 container 设置了max-width，用以匹配网格系统。*/
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+                /*最大宽度*/
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href=""><img src="./image/duohuogirl.jpg" class="img-responsive" alt="响应式图像"></a>
+        <a href="" style="font-size: 20px;"><strong>链接样式</strong></a>
+        <ul>
+            <li>
+                <a href="grid.html">grid</a>
+            </li>
+            <li>
+                <a href="typesetting.html">typesetting</a>
+            </li>
+        </ul>
+        <ul>
+            响应式图像
+            <ul>
+                img-responsive class 为图像赋予了 max-width: 100%;和 height: auto; 属性<br>
+                可以让图像按比例缩放，不超过其父元素的尺寸。<br>
+                .img-responsive {<br>
+                display: block;<br>
+                height: auto;<br>
+                max-width: 100%;<br>
+                }<br>
+            </ul>
+            基本的全局显示
+            <ul>
+                第一条规则设置 body 的默认字体样式为 "Helvetica Neue", Helvetica, Arial, sans-serif。<br>
+                第二条规则设置文本的默认字体大小为 14 像素。<br>
+                第三条规则设置默认的行高度为 1.428571429。<br>
+                第四条规则设置默认的文本颜色为 #333333。<br>
+                最后一条规则设置默认的背景颜色为白色。<br>
+                body {<br>
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;<br>
+                font-size: 14px;<br>
+                line-height: 1.428571429;<br>
+                color: #333333;<br>
+                background-color: #ffffff;<br>
+                }<br>
+            </ul>
+        </ul>
+    </div>
+    <div class="container">
+        空一格
+        <div class="row">
+            顶头
+            <div class="col-*-*">顶头</div>
+            <div class="col-*-*">顶头</div>
+        </div>
+        空一格
+        <div class="row">顶头</div>
+    </div>
+</body>
+
+</html>
